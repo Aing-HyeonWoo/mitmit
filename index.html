@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image and Audio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <h1>Find your brother</h1>
+    <div class="container">
+        <div id="cam">
+            <div id="webcam-section"> 
+                <video id="webcam" autoplay></video>
+                    <button id="capture-btn">Capture</button>
+                    
+            </div>
+    
+            <div id="cropping-section">
+                
+                <img id="captured-image" alt="tangtanghuruhuru">
+                <div class="button-group">
+                    <button id="crop-btn">Crop</button>
+                    <button id="cancel-crop-btn">Cancel</button>
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+        <div id="select">
+
+            <div>
+                <img id="captured-image" alt="tangtanghuruhuru" style="display:none;">
+    
+                <h3>Upload Audio (WAV Only):</h3>
+                <input type="file" id="audio-upload" accept=".wav">
+                
+            </div>
+    
+            <div>
+                <h3>Upload Image:</h3>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+    
+            <div id="confirm-section" style="display: none;">
+                <button id="confirm-btn">Let's find!</button>
+            </div>
+    
+            <div>
+                <h3>Cropped Image Preview:</h3>
+                <img id="cropped-image" >
+            </div>
+        </div>
+
+    </div>
+
+    <div id="overlay"></div>
+    <div id="popup">
+        <div id="api-data">
+            <div id="animalanimal">
+                <div id="yourface"></div>
+                <div id="result"><img src="" id="realresult"></div>
+            </div>
+            <div id="chatbot">
+                <div id="chat-history">
+                </div>
+                <div id="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type a message...">
+                    <button id="send-message-btn"><i class="fa-solid fa-arrow-up"></i></button>
+                </div>
+            </div>
+        </div>
+        <button id="close-popup-btn"><i class="fa-solid fa-x"></i></button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="./scripts.js"></script>
+</body>
